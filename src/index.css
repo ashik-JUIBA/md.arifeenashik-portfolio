@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  /* Dynamic transitions and animation helpers */
+  .animate-spin-once {
+    animation: spin 0.4s ease-out 1;
+  }
+}
+
+/* Frosted Glass Theme Core Utilities */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
+  transform: translateY(-2px);
+}
+
+.glass-panel-dark {
+  background-color: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-outline {
+  color: #ffffff;
+  text-shadow: 
+    2px 2px 0px #141414, 
+    -1px -1px 0px #141414, 
+    1px -1px 0px #141414, 
+    -1px 1px 0px #141414,
+    1px 1px 0px #141414;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #E9EDF2;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #E9EDF2;
+  color: #141414;
+}
+
+
